@@ -5,21 +5,16 @@
     "scheme": "noordaily",
     "version": "1.0.0",
     "orientation": "portrait",
-
     "icon": "./assets/images/icon.png",
-
     "userInterfaceStyle": "automatic",
-
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#14532D"
     },
-
     "assetBundlePatterns": [
       "**/*"
     ],
-
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.noordaily.app",
@@ -29,7 +24,6 @@
         ]
       }
     },
-
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
@@ -42,10 +36,8 @@
         "RECEIVE_BOOT_COMPLETED"
       ]
     },
-
     "plugins": [
       "expo-router",
-
       [
         "expo-build-properties",
         {
@@ -54,7 +46,6 @@
           }
         }
       ],
-
       [
         "expo-notifications",
         {
@@ -62,13 +53,14 @@
           "color": "#14532D"
         }
       ],
-
       "./plugins/withDailyWallpaper.js"
     ],
-
     "extra": {
       "router": {
         "origin": false
+      },
+      "eas": {
+        "projectId": "725b9e4b-89d7-419f-81e2-7b73999fd17d"
       }
     }
   }
