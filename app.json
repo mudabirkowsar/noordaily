@@ -1,0 +1,75 @@
+{
+  "expo": {
+    "name": "NoorDaily",
+    "slug": "noordaily",
+    "scheme": "noordaily",
+    "version": "1.0.0",
+    "orientation": "portrait",
+
+    "icon": "./assets/images/icon.png",
+
+    "userInterfaceStyle": "automatic",
+
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#14532D"
+    },
+
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.noordaily.app",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      }
+    },
+
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#14532D"
+      },
+      "package": "com.noordaily.app",
+      "permissions": [
+        "NOTIFICATIONS",
+        "SCHEDULE_EXACT_ALARM",
+        "RECEIVE_BOOT_COMPLETED"
+      ]
+    },
+
+    "plugins": [
+      "expo-router",
+
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 24
+          }
+        }
+      ],
+
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/notification-icon.png",
+          "color": "#14532D"
+        }
+      ],
+
+      "./plugins/withDailyWallpaper.js"
+    ],
+
+    "extra": {
+      "router": {
+        "origin": false
+      }
+    }
+  }
+}
